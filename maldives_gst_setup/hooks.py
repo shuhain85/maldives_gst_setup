@@ -7,7 +7,20 @@ app_license = "mit"
 
 # Apps
 # ------------------
-
+doc_events = {
+    "Item": {
+        "before_insert": "maldives_gst_setup.item_tax_hooks.auto_assign_item_tax_template"
+    },
+    "Sales Invoice": {
+        "before_submit": "maldives_gst_setup.sales_invoice_hooks.calculate_tax_totals"
+    }
+}
+override_doctype_class = {
+    "POS Invoice": "uom_enforcer.overrides.pos_invoice.CustomPOSInvoice"
+}
+#override_doctype_class = {
+#    "Sales Invoice": "uom_enforcer.overrides.sales_invoice.CustomSalesInvoice"
+#}
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
