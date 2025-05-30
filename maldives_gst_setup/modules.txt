@@ -1,1 +1,1 @@
-Maldives Gst Setup
+maldives_gst_setup
