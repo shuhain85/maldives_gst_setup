@@ -1,0 +1,10 @@
+{
+  "doctype": "Workspace",
+  "name": "maldives_gst_setup",
+  "module": "maldives_gst_setup",
+  "label": "Maldives GST",
+  "owner": "Administrator",
+  "icon": "octicon octicon-globe",
+  "is_standard": 1,
+  "content": "[{\"type\": \"page\", \"label\": \"GST Setup Wizard\", \"name\": \"gst-setup-wizard\"}]"
+}
