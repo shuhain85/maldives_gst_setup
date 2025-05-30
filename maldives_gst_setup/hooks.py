@@ -7,20 +7,28 @@ app_license = "mit"
 
 # Apps
 # ------------------
+# hooks.py
+
 doc_events = {
+    # Automatically assign Item Tax Template based on custom_taxabel field when a new item is created
     "Item": {
-        "before_insert": "maldives_gst_setup.item_tax_hooks.auto_assign_item_tax_template"
+        "before_insert": "maldives_gst_setup.item_tax_hooks.auto_assign_item_tax_template",
+        # Optional: Uncomment below to reapply tax template logic on updates too
+        # "before_save": "maldives_gst_setup.item_tax_hooks.auto_assign_item_tax_template"
     },
-    "Sales Invoice": {
-        "before_submit": "maldives_gst_setup.sales_invoice_hooks.calculate_tax_totals"
-    }
+
+    # Optional: Uncomment this when you're ready to enable tax total calculations on Sales Invoice submission
+    # "Sales Invoice": {
+    #     "before_submit": "maldives_gst_setup.sales_invoice_hooks.calculate_tax_totals"
+    # }
 }
+
 override_doctype_class = {
     "POS Invoice": "uom_enforcer.overrides.pos_invoice.CustomPOSInvoice"
 }
-#override_doctype_class = {
-#    "Sales Invoice": "uom_enforcer.overrides.sales_invoice.CustomSalesInvoice"
-#}
+override_doctype_class = {
+    "Sales Invoice": "uom_enforcer.overrides.sales_invoice.CustomSalesInvoice"
+}
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
