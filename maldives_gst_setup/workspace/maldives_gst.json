@@ -1,7 +1,10 @@
 {
   "label": "Maldives GST",
-  "icon": "octicon octicon-globe",
   "module": "Maldives Gst Setup",
+  "icon": "octicon octicon-globe",
+  "is_standard": 1,
+  "for_user": "",
+  "hide_custom": 0,
   "content": [
     {
       "type": "page",
