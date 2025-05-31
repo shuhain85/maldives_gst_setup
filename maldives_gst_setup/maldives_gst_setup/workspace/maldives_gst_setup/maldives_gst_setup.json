@@ -3,8 +3,8 @@
   "name": "maldives_gst_setup",
   "module": "maldives_gst_setup",
   "label": "Maldives GST",
-  "owner": "Administrator",
-  "icon": "octicon octicon-globe",
+  "public": 1,
   "is_standard": 1,
+  "icon": "octicon octicon-globe",
   "content": "[{\"type\": \"page\", \"label\": \"GST Setup Wizard\", \"name\": \"gst-setup-wizard\"}]"
 }
